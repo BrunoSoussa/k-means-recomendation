@@ -142,7 +142,3 @@ Seu Nome - [@seu_twitter](https://twitter.com/seu_twitter) - email@exemplo.com
 
 Link do Projeto: [https://github.com/seu-usuario/book-recommendation-system](https://github.com/seu-usuario/book-recommendation-system)
 
-## 🙏 Agradecimentos
-
-- [Book-Crossing Dataset](http://www2.informatik.uni-freiburg.de/~cziegler/BX/)
-- [scikit-learn](https://scikit-learn.org/)
