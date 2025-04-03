@@ -199,21 +199,4 @@ BookRecommender(
   - Otimização de memória com sparse matrices
   - Rápida geração de recomendações
 
-## 🤝 Contribuição
-
-1. Fork o projeto
-2. Crie sua branch de feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add: nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📝 Licença
-
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
-
-## 📫 Contato
-
-Seu Nome - [@seu_twitter](https://twitter.com/seu_twitter) - email@exemplo.com
-
-Link do Projeto: [https://github.com/seu-usuario/book-recommendation-system](https://github.com/seu-usuario/book-recommendation-system)
 
