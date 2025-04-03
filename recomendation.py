@@ -1,12 +1,10 @@
-import numpy as np
 import pandas as pd
-from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
-from typing import List, Tuple, Optional
+from typing import List
 from dataclasses import dataclass
 import logging
 
-# Configuração do logging
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 @dataclass
@@ -176,7 +174,7 @@ def main():
         
         
      
-        book_title = "Where the Heart Is (Oprah's Book Club (Paperback))"
+        book_title = "Jewel"
         recommendations = recommender.get_recommendations(book_title, n_recommendations=5)
         
         print(f"\nRecomendações para: {book_title}\n")
@@ -189,3 +187,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

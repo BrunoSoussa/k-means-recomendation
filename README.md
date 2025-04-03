@@ -13,9 +13,10 @@ Sistema avançado de recomendação de livros que utiliza o algoritmo K-Nearest 
 - **Algoritmo KNN Otimizado**: Implementação eficiente do K-Nearest Neighbors para cálculo de similaridade entre livros
 - **Filtragem Colaborativa**: Sistema baseado em ratings de usuários para recomendações mais precisas
 - **Tratamento de Dados Robusto**: Limpeza e processamento eficiente de datasets
-- **Design Orientado a Objetos**: Arquitetura modular e extensível
+- **Design Orientado a Objetos**: Arquitetura modular e extensível com princípios sólidos de POO
 - **Documentação Completa**: Documentação detalhada com type hints e docstrings
 - **Tratamento de Erros**: Sistema robusto de tratamento de exceções
+- **Notebook Didático**: Explicação detalhada do funcionamento do sistema em formato Jupyter Notebook
 
 ## 🔧 Arquitetura
 
@@ -31,6 +32,60 @@ Sistema avançado de recomendação de livros que utiliza o algoritmo K-Nearest 
   - Documentação completa com type hints
   - Métodos para carregamento e processamento de dados
   - Geração de recomendações baseadas em similaridade
+
+## 🧩 Implementação Orientada a Objetos
+
+O sistema foi desenvolvido seguindo princípios sólidos de Programação Orientada a Objetos (POO):
+
+- **Encapsulamento**: Dados e comportamentos relacionados são agrupados em classes coesas
+- **Abstração**: Interface clara e bem definida através de métodos públicos documentados
+- **Modularidade**: Separação de responsabilidades entre classes e métodos
+- **Reutilização**: Design que permite extensão e adaptação para diferentes contextos
+
+Benefícios da abordagem OO neste projeto:
+
+1. **Manutenibilidade**: Código organizado e fácil de manter
+2. **Escalabilidade**: Facilidade para adicionar novos recursos ou algoritmos
+3. **Testabilidade**: Estrutura que facilita testes unitários e de integração
+4. **Legibilidade**: Código mais claro e autodocumentado
+
+### Exemplo de Design OO
+
+```python
+@dataclass
+class BookRecommendation:
+    """Representa uma recomendação de livro com seu título e score de similaridade."""
+    title: str
+    similarity_score: float
+
+class BookRecommender:
+    """Sistema de recomendação de livros usando KNN baseado em ratings de usuários."""
+    
+    def __init__(self, books_file: str, ratings_file: str, min_book_ratings: int = 100, min_user_ratings: int = 10):
+        # Inicialização e validação
+        
+    def _load_and_process_data(self, books_file: str, ratings_file: str) -> None:
+        # Encapsulamento da lógica de processamento de dados
+        
+    def _train_model(self) -> None:
+        # Encapsulamento da lógica de treinamento
+        
+    def get_recommendations(self, book_title: str, n_recommendations: int = 10) -> List[BookRecommendation]:
+        # Interface pública para obter recomendações
+```
+
+## 📓 Notebook Didático
+
+O projeto inclui um notebook Jupyter (`sistema_recomendacao_livros.ipynb`) que explica detalhadamente o funcionamento do sistema de recomendação:
+
+- **Análise Exploratória**: Visualizações e análises dos datasets utilizados
+- **Pré-processamento**: Explicação passo a passo da limpeza e preparação dos dados
+- **Algoritmo KNN**: Detalhamento do funcionamento do algoritmo e da métrica de similaridade por cosseno
+- **Visualizações**: Gráficos explicativos para melhor compreensão do sistema
+- **Exemplos Práticos**: Demonstrações de uso com diferentes livros
+- **Avaliação**: Análise das recomendações geradas
+
+O notebook serve como uma ferramenta didática para entender os conceitos por trás do sistema de recomendação, sendo ideal para estudantes e profissionais interessados em aprender sobre sistemas de recomendação e aprendizado de máquina.
 
 ## 🚀 Instalação
 
@@ -74,13 +129,15 @@ User-ID;ISBN;Rating
 
 ## 💻 Uso
 
+### Utilizando o Módulo Python
+
 ```python
 from recomendation import BookRecommender
 
 # Inicializar o sistema
 recommender = BookRecommender(
-    books_file='BX-Books.csv',
-    ratings_file='BX-Book-Ratings.csv',
+    books_file='dataset_books/BX-Books.csv',
+    ratings_file='dataset_books/BX-Book-Ratings.csv',
     min_book_ratings=100,  # Filtrar livros com menos de 100 ratings
     min_user_ratings=10    # Filtrar usuários com menos de 10 ratings
 )
@@ -96,6 +153,24 @@ for rec in recommendations:
     print(f"Livro: {rec.title}")
     print(f"Score de Similaridade: {rec.similarity_score:.3f}\n")
 ```
+
+### Explorando o Notebook Didático
+
+Para uma explicação detalhada do sistema e visualizações interativas:
+
+1. Inicie o Jupyter Notebook:
+```bash
+jupyter notebook
+```
+
+2. Abra o arquivo `sistema_recomendacao_livros.ipynb`
+
+3. Execute as células sequencialmente para:
+   - Visualizar a distribuição dos dados
+   - Entender o pré-processamento
+   - Ver exemplos de recomendações com gráficos
+   - Explorar a métrica de similaridade por cosseno
+   - Analisar a performance do sistema
 
 ## ⚙️ Configuração
 
